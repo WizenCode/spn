@@ -88,7 +88,7 @@ def load_plugins():
 
 
 def check_sudo(chat_id):
-    if chat_id in config['478026278']:
+    if chat_id in config['sudo_members']:
         return True
     return False
 
@@ -602,7 +602,7 @@ async def check_queue():
 
 
 load_plugins()
-bot = telepot.aio.Bot(config['601270288:AAHfClZ7pKBLno4lI01fNQYOCfNWBElbhvQ'])
+bot = telepot.aio.Bot(config['token'])
 answerer = telepot.aio.helper.Answerer(bot)
 
 loop = asyncio.get_event_loop()
